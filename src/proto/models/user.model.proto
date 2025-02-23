@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package models;
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  string id   = 1;
+  string name = 2;
+}
+
+message UserSayHelloRequest {
+  string name = 1;
+}
+
+message UserSayHelloResponse {
+  string message = 1;
+}
+
+message FetchUserResponse {
+  repeated GetUserResponse users = 1;
+}
+
+message FetchUserRequest {
+  string name = 1;
+}

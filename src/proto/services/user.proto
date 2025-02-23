@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package servers;
+
+import "models/user.model.proto";
+
+service UserService {
+  rpc GetUser(models.GetUserRequest) returns (models.GetUserResponse);
+  rpc UserSayHello(models.UserSayHelloRequest) returns (models.UserSayHelloResponse);
+  rpc FetchUser(models.FetchUserRequest) returns (models.FetchUserResponse);
+}
