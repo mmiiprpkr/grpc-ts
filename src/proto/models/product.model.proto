@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package models;
+
+message Product {
+  string id          = 1;
+  string name        = 2;
+  string description = 3;
+  float price        = 4;
+  string category    = 5;
+  string image       = 6;
+  string createdAt   = 7;
+  string updatedAt   = 8;
+}
+
+message FetchProductRequest {
+  string id = 1;
+}
+
+message FetchProductResponse {
+  Product product = 1;
+}

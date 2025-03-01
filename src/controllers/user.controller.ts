@@ -8,7 +8,7 @@ import type {
     UserSayHelloResponse,
 } from "../generated/models/user.model";
 import { Status } from "@grpc/grpc-js/build/src/constants";
-import type { UserServiceServer } from "../generated/services/user";
+import type { UserServiceServer } from "../generated/services/user.services";
 
 export class UserController implements UserServiceServer {
     [key: string]: UntypedHandleCall;
