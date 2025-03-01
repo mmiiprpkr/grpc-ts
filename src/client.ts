@@ -1,5 +1,5 @@
 import { credentials } from "@grpc/grpc-js";
-import { UserServiceClient } from "./generated/services/user";
+import { UserServiceClient } from "./generated/services/user.services";
 import type { GetUserRequest } from "./generated/models/user.model";
 
 const client = new UserServiceClient("localhost:50051", credentials.createInsecure());
