@@ -18,7 +18,7 @@ const productController = new ProductController();
         const port = process.env.PORT || 50051;
 
         service.bindAsync(
-            `localhost:${port}`,
+            `0.0.0.0:${port}`,
             ServerCredentials.createInsecure(),
             (err) => {
                 if (err) {

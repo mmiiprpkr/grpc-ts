@@ -3,7 +3,9 @@
     "module": "index.ts",
     "type": "module",
     "scripts": {
-        "proto-gen": "rm -rf ./src/generated/* &&protoc --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./src/generated --ts_proto_opt=outputServices=grpc-js,env=node,esModuleInterop=true --proto_path=src/proto src/proto/services/*"
+        "proto-gen": "rm -rf ./src/generated/* &&protoc --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./src/generated --ts_proto_opt=outputServices=grpc-js,env=node,esModuleInterop=true --proto_path=src/proto src/proto/services/*",
+        "start": "bun run dist/server.js",
+        "build": "bun build src/server.ts --outfile dist/server.js --target bun"
     },
     "devDependencies": {
         "@types/bun": "latest"
